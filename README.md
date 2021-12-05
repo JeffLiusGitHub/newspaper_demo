@@ -50,6 +50,7 @@ Keep it simple when it comes to importing the JSON file, there's no need to set 
 
 Editors have written an article and would like users to be able to read it. It contains text, quotes, and images. They'd like the article to be viewable on both Desktop & Mobile.
 
+
 **Files:**
 - `/src/pages/Article1.tsx`
 - `/src/data/article1.json`
@@ -98,7 +99,7 @@ The editors have also snuck in a promotional component for additional content, f
 
 Given this is a demo site, the button should be simple and only trigger an `alert("Article has been shared!")`.
 
-You may also use this step to tidy up anything you feel could improve the site's functionality or accessibility, or give it your own personal flare.
+You may also use this step to tidy up anything you feel could improve the site's functionality or accessibility, or give it your own personal flair.
 
 **Files:**
 - `/src/pages/Article4.tsx`
