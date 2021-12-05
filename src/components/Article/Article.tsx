@@ -24,7 +24,7 @@ const Article = ({ children, title, contributors, dates }: Props): JSX.Element =
         {dates && (
           <span className={styles.date}>
             {dates.posted && (<span>Posted {dates.posted}</span>)}
-            {dates.updated && (<span>{' '}Updated {dates.updated}</span>)}
+            {dates.updated && (<span>{', '}updated {dates.updated}</span>)}
           </span>
         )}
       </div>
