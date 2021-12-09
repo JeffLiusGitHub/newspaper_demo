@@ -1,0 +1,25 @@
+.keyPoint{
+    border-bottom: 1px solid var(--grey-border);
+    border-top: 1px solid var(--grey-border);
+    width: 15px;
+}
+.keyPoint ul{
+    margin-bottom: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+}
+.keyPoint li{
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    list-style: none;
+}
+.keyPoint span{
+    background-color: var(--list-bullet,var(--colour-accent));
+    height: 0.75rem;
+    left: 0;
+    position: absolute;
+    top: 0.25rem;
+    width: 0.75rem;
+}

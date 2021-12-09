@@ -1,4 +1,4 @@
-export const A = ({ type, content, children }) => {
+export const AElement = ({ type, content, children }) => {
     return (
       <button>
         {children}
