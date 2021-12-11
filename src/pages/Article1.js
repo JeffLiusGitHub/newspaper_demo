@@ -3,13 +3,13 @@ import data from "../data/article1.json";
 import formatDate from "../components/content/FormatDate";
 import FormatContributors from "../components/content/FormatContributors";
 import ArticleContent from "../components/content/ArticleContent";
-import FormatImage from "../components/content/FormatImage";
+import { MediaQueryContainer } from "../components/content/LayoutContainer";
 import Share from "../components/Share/Share";
 const Article1 = () => {
   const { text } = data;
   const image = data._embedded.mediaEmbedded;
-   console.log(data)
-const url = data.canonicalURL
+  console.log(data);
+  const url = data.canonicalURL;
   return (
     <>
       <Article
@@ -20,16 +20,15 @@ const url = data.canonicalURL
           updated: formatDate(data.dates.updated),
         }}
       >
-        <Share url = {url}/>
-        <ArticleContent 
-        // data = {data}
-        item={text.json} image = {image}
-         />
+        <Share url={url} />
+        <MediaQueryContainer>
+            <ArticleContent item={text.json} image={data._embedded.mediaEmbedded} />
+        </MediaQueryContainer>
+      
       </Article>{" "}
     </>
   );
 };
-
 
 // {
 //   "type": "element",
@@ -65,6 +64,5 @@ const url = data.canonicalURL
 //     }
 //   }
 // },
-
 
 export default Article1;

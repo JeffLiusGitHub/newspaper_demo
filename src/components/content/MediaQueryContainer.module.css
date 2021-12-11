@@ -1,0 +1,36 @@
+.layout {
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 3rem;
+  width: 78%;
+
+}
+@media only screen and (max-width: 75em) {
+  .layout {
+    width: 78%;
+
+  }
+}
+/* 1200 */
+@media only screen and (max-width: 62em) {
+  .layout {
+    width: 80%;
+  }
+}
+/* 991 */
+@media only screen and (max-width: 48em) {
+  .layout {
+    width: 90%;
+    padding-bottom: 2rem;
+    padding-top: 1.5rem;
+  }
+}
+/* 768 */
+@media only screen and ((max-width: 34em)) {
+  .layout {
+      
+    width: 95%;
+    padding-bottom: 2rem;
+    padding-top: 1.5rem;
+  }
+}

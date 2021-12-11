@@ -1,12 +1,11 @@
-import { omit, replace } from "lodash";
+import { omit } from "lodash";
 import { DivElement } from "./DivElement";
 import { H1Element } from "./H1Element";
 import { PElement } from "./PElement";
 import { PullquoteElement } from "./PullquoteElement";
 import FormatImage from "./FormatImage";
 import { ImageElement } from "./ImageElement";
-import { FigureCaption } from "./FigureCaption";
-import { ButtonElement } from "./ButtonElement";
+import { InsElement } from "./InsElement";
 import { KeyPointsElement } from "./KeyPointsElement";
 const tagNameToComponent = {
   pullquote: PullquoteElement,
@@ -37,7 +36,7 @@ const ArticleContent = ({ item, image, synopsis }) => {
     // console.log(caption);
   
     if (url.includes("instagram")) {
-      return <ButtonElement url={url}></ButtonElement>;
+      return <InsElement url={url}></InsElement>;
     } else
      if (url !== " ") {
        let align = item?.parameters?.align||''

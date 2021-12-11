@@ -17,5 +17,16 @@
   clear: right;
   float: right;
   margin-left: 1.5rem;
+  
 
+}
+@media only screen and (max-width:34rem) {
+  .imageElement.right {
+    margin-left: auto;
+    margin-right: auto;
+    overflow: visible;
+    width: 100%;
+    margin-bottom: 1.5rem;
+    box-sizing: border-box;
+  }
 }

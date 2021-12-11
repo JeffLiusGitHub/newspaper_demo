@@ -4,6 +4,7 @@ import formatDate from "../components/content/FormatDate";
 import FormatContributors from "../components/content/FormatContributors";
 import ArticleContent from "../components/content/ArticleContent";
 import InstagramEmbed from "react-instagram-embed";
+import { MediaQueryContainer } from "../components/content/LayoutContainer";
 import Share from "../components/Share/Share";
 const Article2 = () => {
   const { text } = data;
@@ -21,9 +22,9 @@ console.log(data)
           updated: formatDate(data.dates.updated),
         }}
       > <Share url = {url}/>
-        <ArticleContent item={text.json} image={data._embedded.mediaEmbedded} 
-
-        ></ArticleContent>
+        <MediaQueryContainer>
+            <ArticleContent item={text.json} image={data._embedded.mediaEmbedded} />
+        </MediaQueryContainer>
     
 
       </Article>{" "}

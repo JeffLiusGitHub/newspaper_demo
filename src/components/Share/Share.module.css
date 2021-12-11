@@ -39,6 +39,7 @@
   height: 48px;
   position: relative;
   background-color: rgba(0, 0, 0, 0.15);
+  box-shadow: 4px 6px 15px -9px rgba(0,0,0,0.6);
 }
 .shareButton{
     appearance: button;

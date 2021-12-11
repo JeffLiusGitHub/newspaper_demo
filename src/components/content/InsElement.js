@@ -1,5 +1,5 @@
-import styles from "./DivElement.module.css";
-export const ButtonElement = ({ url }) => {
+
+export const InsElement = ({ url }) => {
   return (
     <span>
       <svg
@@ -16,7 +16,7 @@ export const ButtonElement = ({ url }) => {
           ></path>
         </g>
       </svg>
-      Instagram Embed:
+       Instagram Embed:
       <a href={url}>LINK</a>
     </span>
   );

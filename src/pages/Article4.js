@@ -3,8 +3,8 @@ import data from "../data/article4.json";
 import formatDate from "../components/content/FormatDate";
 import FormatContributors from "../components/content/FormatContributors";
 import ArticleContent from "../components/content/ArticleContent";
-import { KeyPointsElement } from "../components/content/KeyPointsElement";
 import Share from "../components/Share/Share";
+import { MediaQueryContainer } from "../components/content/LayoutContainer";
 const Article4 = () => {
   const { text } = data;
   const url = data.canonicalURL
@@ -22,19 +22,14 @@ console.log(synopsis)
           updated: formatDate(data.dates.updated),
         }}
       ><Share url = {url}/>
-        <ArticleContent item={text.json} image={data._embedded.mediaEmbedded} synopsis={synopsis}/>
+        <MediaQueryContainer>
+          <ArticleContent
+            item={text.json}
+            image={data._embedded.mediaEmbedded}
+            synopsis={synopsis}
+          />
+        </MediaQueryContainer>
       </Article>{" "}
-      <KeyPointsElement>
-        
-        <ul>
-          <li>
-               <span>a</span>
-          </li>
-          <li>
-               <span>b</span>
-          </li>
-        </ul>
-      </KeyPointsElement>
     </>
   );
 };
