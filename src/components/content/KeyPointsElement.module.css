@@ -1,7 +1,17 @@
+
 .keyPoint{
-    border-bottom: 1px solid var(--grey-border);
-    border-top: 1px solid var(--grey-border);
-    width: 15px;
+    border-bottom: 1px solid #e6e6e6;
+    border-top: 1px solid #e6e6e6;
+    width: 50%;
+    clear: right;
+    float: right;
+    margin-left: 1.5rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+.label{
+       font-weight: 900;
 }
 .keyPoint ul{
     margin-bottom: 0;
@@ -14,9 +24,13 @@
     font-size: 1.125rem;
     line-height: 1.75rem;
     list-style: none;
+    margin-bottom: 0.5rem;
+    position: relative;
+    padding-left: 1.5rem;
 }
+
 .keyPoint span{
-    background-color: var(--list-bullet,var(--colour-accent));
+    background-color: #01cfff;
     height: 0.75rem;
     left: 0;
     position: absolute;

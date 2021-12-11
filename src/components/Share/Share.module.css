@@ -1,0 +1,101 @@
+.shareElement {
+  border-bottom: 1px solid #e6e6e6;
+  border-left: 0;
+  border-right: 0;
+  padding: 1rem;
+ 
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.title {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.layout{
+    align-items: flex-start;
+    display: flex;
+    justify-content: left;
+}
+.link {
+  display: block;
+  height: 48px;
+  margin-right: 2rem;
+  max-width: 600px;
+  cursor: pointer;
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 700;
+  overflow: hidden;
+  padding: 0.8rem 1rem;
+  text-overflow: ellipsis;
+  user-select: none;
+  white-space: nowrap;
+  border-radius: 24px;
+  height: 48px;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.15);
+}
+.shareButton{
+    appearance: button;
+  background-color: #1790c8;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  box-sizing: border-box;
+  color: #f3fff4;
+  cursor: pointer;
+  display: inline-block;
+  font-family: din-round,sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: .8px;
+  line-height: 20px;
+  margin: 0;
+  outline: none;
+  overflow: visible;
+  padding: 13px 16px;
+  text-align: center;
+  text-transform: uppercase;
+  touch-action: manipulation;
+  transform: translateZ(0);
+  transition: filter .2s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  width: 10rem;
+}
+
+
+.shareButton:after {
+  background-clip: padding-box;
+  background-color: #80d3fa;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  bottom: -4px;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.shareButton:main,
+.shareButton:focus {
+  user-select: auto;
+}
+
+.shareButton:hover:not(:disabled) {
+  filter: brightness(1.1);
+}
+
+.shareButton:disabled {
+  cursor: auto;
+}
