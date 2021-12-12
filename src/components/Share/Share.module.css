@@ -3,7 +3,6 @@
   border-left: 0;
   border-right: 0;
   padding: 1rem;
- 
   margin-bottom: 1rem;
   position: relative;
 }
@@ -16,11 +15,13 @@
   width: 100%;
   margin-bottom: 20px;
 }
-.layout{
-    align-items: flex-start;
-    display: flex;
-    justify-content: left;
+
+.layout {
+  align-items: flex-start;
+  display: flex;
+  justify-content: left;
 }
+
 .link {
   display: block;
   height: 48px;
@@ -39,10 +40,10 @@
   height: 48px;
   position: relative;
   background-color: rgba(0, 0, 0, 0.15);
-  box-shadow: 4px 6px 15px -9px rgba(0,0,0,0.6);
+  box-shadow: 4px 6px 15px -9px rgba(0, 0, 0, 0.6);
 }
-.shareButton{
-    appearance: button;
+.shareButton {
+  appearance: button;
   background-color: #1790c8;
   border: solid transparent;
   border-radius: 16px;
@@ -51,10 +52,10 @@
   color: #f3fff4;
   cursor: pointer;
   display: inline-block;
-  font-family: din-round,sans-serif;
+  font-family: din-round, sans-serif;
   font-size: 15px;
   font-weight: 700;
-  letter-spacing: .8px;
+  letter-spacing: 0.8px;
   line-height: 20px;
   margin: 0;
   outline: none;
@@ -64,14 +65,13 @@
   text-transform: uppercase;
   touch-action: manipulation;
   transform: translateZ(0);
-  transition: filter .2s;
+  transition: filter 0.2s;
   user-select: none;
   -webkit-user-select: none;
   vertical-align: middle;
   white-space: nowrap;
   width: 10rem;
 }
-
 
 .shareButton:after {
   background-clip: padding-box;

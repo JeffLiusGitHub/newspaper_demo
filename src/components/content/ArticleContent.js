@@ -1,12 +1,13 @@
 import { omit } from "lodash";
-import { DivElement } from "./DivElement";
-import { H1Element } from "./H1Element";
-import { PElement } from "./PElement";
-import { PullquoteElement } from "./PullquoteElement";
+import { DivElement } from "./elementComponent/DivElement";
+import { H1Element } from "./elementComponent/H1Element";
+import { PElement } from "./elementComponent/PElement";
+import { PullquoteElement } from "./elementComponent/PullquoteElement";
 import FormatImage from "./FormatImage";
-import { ImageElement } from "./ImageElement";
-import { InsElement } from "./InsElement";
-import { KeyPointsElement } from "./KeyPointsElement";
+import { ImageElement } from "./elementComponent/ImageElement";
+import { InsElement } from "./elementComponent/InsElement";
+import { KeyPointsElement } from "./elementComponent/KeyPointsElement";
+
 const tagNameToComponent = {
   pullquote: PullquoteElement,
   h1: H1Element,
@@ -18,41 +19,34 @@ const tagNameToComponent = {
 const ArticleContent = ({ item, image, synopsis }) => {
   const { tagname, parameters, children, content } = item;
   const Tag = tagNameToComponent[tagname] || tagname;
-
-  // console.log(item.content);
-  // console.log(synopsis)
   if (item?.parameters?.ref) {
-    // console.log(item);
-  if (item?.children[0]?.content?.toString().includes("key point")&&synopsis!==null) {
-    // if (item?.children[0]?.content?.toString()==="key point"&&synopsis!==null) {
-    console.log('000',{synopsis})
-    return <KeyPointsElement synopsis={synopsis}></KeyPointsElement>;
-  }
-
-    // console.log({ image, ref: item.parameters.ref });
+    if (
+      item?.children[0]?.content?.toString().includes("key point") &&
+      synopsis !== null
+    ) {
+      return <KeyPointsElement synopsis={synopsis}></KeyPointsElement>;
+    }
     const { alt, url, caption } = FormatImage(image, parameters.ref);
-    // console.log(alt);
-    // console.log(url);
-    // console.log(caption);
-  
     if (url.includes("instagram")) {
       return <InsElement url={url}></InsElement>;
-    } else
-     if (url !== " ") {
-       let align = item?.parameters?.align||''
+    } else if (url !== " ") {
+      let align = item?.parameters?.align || "";
       return (
         <>
           <Tag url={url} alt={alt} align={align} caption={caption}></Tag>
-          {/* <FigureCaption caption={caption}></FigureCaption> */}
         </>
       );
     }
-  } else 
-  if (item?.type === "element") {
+  } else if (item?.type === "element") {
     return (
       <Tag {...omit(parameters, "ref")}>
         {children.map((item, key) => (
-          <ArticleContent key={key} item={item} image={image} synopsis={synopsis}/>
+          <ArticleContent
+            key={key}
+            item={item}
+            image={image}
+            synopsis={synopsis}
+          />
         ))}
       </Tag>
     );

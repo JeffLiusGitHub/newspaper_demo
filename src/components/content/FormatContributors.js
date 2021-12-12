@@ -1,4 +1,5 @@
 import { get } from "lodash";
+
 const FormatContributors = (data) => {
   let contributorArray = [];
   for (let i = 0; i < data._embedded.contributors.length; i++) {
@@ -8,4 +9,5 @@ const FormatContributors = (data) => {
   }
   return contributorArray;
 };
+
 export default FormatContributors;

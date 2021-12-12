@@ -3,12 +3,11 @@ import data from "../data/article1.json";
 import formatDate from "../components/content/FormatDate";
 import FormatContributors from "../components/content/FormatContributors";
 import ArticleContent from "../components/content/ArticleContent";
-import { MediaQueryContainer } from "../components/content/LayoutContainer";
+import { MediaQueryContainer } from "../components/content/MediaQueryContainer";
 import Share from "../components/Share/Share";
+
 const Article1 = () => {
   const { text } = data;
-  const image = data._embedded.mediaEmbedded;
-  console.log(data);
   const url = data.canonicalURL;
   return (
     <>
@@ -22,47 +21,14 @@ const Article1 = () => {
       >
         <Share url={url} />
         <MediaQueryContainer>
-            <ArticleContent item={text.json} image={data._embedded.mediaEmbedded} />
+          <ArticleContent
+            item={text.json}
+            image={data._embedded.mediaEmbedded}
+          />
         </MediaQueryContainer>
-      
       </Article>{" "}
     </>
   );
 };
-
-// {
-//   "type": "element",
-//   "tagname": "a",
-//   "parameters": {
-//     "align": "embed",
-//     "ref": "100635566"
-//   },
-//   "children": [
-//     {
-//       "type": "text",
-//       "content": "[image]"
-//     }
-//   ]
-// }
-// "docType": "Image",
-// "id": "100635500",
-// "media": {
-//   "image": {
-//     "primary": {
-//       "complete": [
-//         {
-//           "cropHeight": 1773,
-//           "cropWidth": 1773,
-//           "height": 862,
-//           "ratio": "1x1",
-//           "url": "https://live-production.wcms.abc-cdn.net.au/c043fa8a36333e48858d922f164e0ed6?impolicy=wcms_crop_resize&cropH=1773&cropW=1773&xPos=813&yPos=211&width=862&height=862",
-//           "width": 862,
-//           "x": 813,
-//           "y": 211
-//         }
-//       ]
-//     }
-//   }
-// },
 
 export default Article1;

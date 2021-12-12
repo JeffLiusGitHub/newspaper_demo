@@ -3,12 +3,11 @@
   margin-right: auto;
   padding-top: 3rem;
   width: 78%;
-
+  line-height: 1.5rem;
 }
 @media only screen and (max-width: 75em) {
   .layout {
     width: 78%;
-
   }
 }
 /* 1200 */
@@ -26,9 +25,8 @@
   }
 }
 /* 768 */
-@media only screen and ((max-width: 34em)) {
-  .layout {
-      
+@media only screen and (max-width: 34em) {
+  .layout {      
     width: 95%;
     padding-bottom: 2rem;
     padding-top: 1.5rem;

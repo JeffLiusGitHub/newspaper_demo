@@ -1,0 +1,13 @@
+.h1Element {
+  margin-top: 0;
+  box-sizing: border-box;
+  font-size: 2rem;
+  font-weight: 900;
+  line-height: 2rem;
+}
+@media only screen and (max-width: 34rem) {
+  .h1Element {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}

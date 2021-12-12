@@ -4,14 +4,12 @@ import formatDate from "../components/content/FormatDate";
 import FormatContributors from "../components/content/FormatContributors";
 import ArticleContent from "../components/content/ArticleContent";
 import Share from "../components/Share/Share";
-import { MediaQueryContainer } from "../components/content/LayoutContainer";
+import { MediaQueryContainer } from "../components/content/MediaQueryContainer";
 const Article4 = () => {
   const { text } = data;
-  const url = data.canonicalURL
-  const synopsis =data._embedded.mediaEmbedded[0].synopsis
-console.log(synopsis)
-  console.log(formatDate(data.dates.published))
-  
+  const url = data.canonicalURL;
+  const synopsis = data._embedded.mediaEmbedded[0].synopsis;
+
   return (
     <>
       <Article
@@ -21,7 +19,8 @@ console.log(synopsis)
           posted: formatDate(data.dates.published),
           updated: formatDate(data.dates.updated),
         }}
-      ><Share url = {url}/>
+      >
+        <Share url={url} />
         <MediaQueryContainer>
           <ArticleContent
             item={text.json}

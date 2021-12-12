@@ -4,13 +4,13 @@ import formatDate from "../components/content/FormatDate";
 import FormatContributors from "../components/content/FormatContributors";
 import ArticleContent from "../components/content/ArticleContent";
 import Share from "../components/Share/Share";
-import { MediaQueryContainer } from "../components/content/LayoutContainer";
+import { MediaQueryContainer } from "../components/content/MediaQueryContainer";
+
 const Article3 = () => {
   const { text } = data;
   const url = data.canonicalURL;
-  console.log(formatDate(data.dates.published));
   const synopsis = data._embedded.mediaEmbedded[0].synopsis;
-  console.log(synopsis);
+
   return (
     <>
       <Article
