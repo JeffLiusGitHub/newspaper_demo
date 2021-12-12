@@ -1,9 +1,9 @@
 # Notes / Documentation
 
 ## 1. For the first question, the main difficulty is changing the JSON API into rendered HTML pages. I found, from the API, some elements have children and some do not. If an element has children I should also get into it to get the data from it. Thus, I use an iteration function. 
-The main idea getting tag type parameters and content from the data to build an element.  If it also has a child, call the function again. 
-I have ever tried the createElement function. But finally, I choose the current method because it is more obvious. I also create an object called tagNameToComponent, to check the type and use the component I built. 
-Because image and synopsis are in the different tables, I also pass them into the function. 
+The main idea is to getting tag type parameters and content from the data to build an element.  If it also has a child, call the function again. 
+I have tried the createElement function. But finally, I chose the current method because it is more obvious for developer to understand. I also created an object called tagNameToComponent, to check the type and use the component I built. 
+Because image and synopsis are in different tables, I also pass them into the function. 
 The layout part is not that difficult as I can refer to value the demo website. Also, I set the media query to the page to fit the responsive design. 
 
 ## 2. Adding third-party embeds is not that difficult if the requirement is to provide a link only. I get the URL from the data and pass it to the href to implement the requirement. 

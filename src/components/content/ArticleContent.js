@@ -19,6 +19,10 @@ const tagNameToComponent = {
 const ArticleContent = ({ item, image, synopsis }) => {
   const { tagname, parameters, children, content } = item;
   const Tag = tagNameToComponent[tagname] || tagname;
+
+  if (item?.parameters?.show) {
+    return <span>{children[0].content}</span>;
+  }
   if (item?.parameters?.ref) {
     if (
       item?.children[0]?.content?.toString().includes("key point") &&
@@ -28,16 +32,12 @@ const ArticleContent = ({ item, image, synopsis }) => {
     }
     const { alt, url, caption } = FormatImage(image, parameters.ref);
     if (url.includes("instagram")) {
-      return <InsElement mediaType ={"Instgram"} url={url}></InsElement>;
-    } 
-    else if(url.includes("twitter")){
-      return <InsElement mediaType ={"Twitter"} url={url}></InsElement>;
-    }
-    else if (url !== " ") {
+      return <InsElement mediaType={"Instgram"} url={url}></InsElement>;
+    } else if (url.includes("twitter")) {
+      return <InsElement mediaType={"Twitter"} url={url}></InsElement>;
+    } else if (url !== " ") {
       let align = item?.parameters?.align || "";
-      return (
-          <Tag url={url} alt={alt} align={align} caption={caption}></Tag>
-      );
+      return <Tag url={url} alt={alt} align={align} caption={caption}></Tag>;
     }
   } else if (item?.type === "element") {
     return (
