@@ -10,11 +10,9 @@ export const KeyPointsElement = ({ synopsis }) => {
   ));
 
   return (
-    <div>
-      <div className={styles.keyPoint}>
-        <h1 className={styles.label}>key Points:</h1>
-        <ul>{keyPointContent}</ul>
-      </div>
+    <div className={styles.keyPoint}>
+      <h1 className={styles.label}>key Points:</h1>
+      <ul>{keyPointContent}</ul>
     </div>
   );
 };

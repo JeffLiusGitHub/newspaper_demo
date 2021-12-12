@@ -28,13 +28,15 @@ const ArticleContent = ({ item, image, synopsis }) => {
     }
     const { alt, url, caption } = FormatImage(image, parameters.ref);
     if (url.includes("instagram")) {
-      return <InsElement url={url}></InsElement>;
-    } else if (url !== " ") {
+      return <InsElement mediaType ={"Instgram"} url={url}></InsElement>;
+    } 
+    else if(url.includes("twitter")){
+      return <InsElement mediaType ={"Twitter"} url={url}></InsElement>;
+    }
+    else if (url !== " ") {
       let align = item?.parameters?.align || "";
       return (
-        <>
           <Tag url={url} alt={alt} align={align} caption={caption}></Tag>
-        </>
       );
     }
   } else if (item?.type === "element") {

@@ -1,4 +1,4 @@
-export const InsElement = ({ url }) => {
+export const InsElement = ({ url, mediaType }) => {
   return (
     <span>
       <svg
@@ -15,7 +15,7 @@ export const InsElement = ({ url }) => {
           ></path>
         </g>
       </svg>
-      Instagram Embed:
+      {mediaType} Embed:
       <a href={url}>LINK</a>
     </span>
   );

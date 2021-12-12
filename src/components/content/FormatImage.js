@@ -7,7 +7,7 @@ const FormatImage = (image, ref) => {
   if (url === "") {
     url = imageObject?.externalembed?.url || "";
   }
-  const caption = imageObject?.caption || "";
+  const caption = imageObject?.caption || " ";
   return { alt: alt, url: url, caption: caption };
 };
 
